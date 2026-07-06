@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About This Computer</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="desktop" aria-label="About This Computer">
+      <section class="window" role="region" aria-labelledby="window-title">
+        <div class="titlebar" data-tauri-drag-region>
+          <div class="controls">
+            <button id="closeButton" class="control-button control-close" type="button" aria-label="Close"></button>
+          </div>
+          <h1 id="window-title" data-tauri-drag-region>About This Computer</h1>
+          <div class="controls right">
+            <button id="minimizeButton" class="control-button control-minimize" type="button" aria-label="Minimize"></button>
+            <button id="collapseButton" class="control-button control-collapse" type="button" aria-label="Collapse"></button>
+          </div>
+        </div>
+
+        <div class="window-body">
+          <div id="errorBox" class="error-box" hidden>
+            System information could not be read.
+          </div>
+
+          <section class="info-panel" aria-label="System information">
+            <header class="hero">
+              <div class="icon-frame">
+                <img id="finderIcon" src="assets/finder-guy.png" alt="Computer icon">
+                <div id="iconFallback" class="icon-fallback" aria-hidden="true">?</div>
+              </div>
+              <div>
+                <div id="appTitle" class="brand">Linux</div>
+              </div>
+            </header>
+
+            <dl class="system-list">
+              <div class="version-row">
+                <dt>Version:</dt>
+                <dd id="version">Loading...</dd>
+                <dd id="hardware" class="hardware-inline">Loading...</dd>
+              </div>
+              <div>
+                <dt>Built-in Memory:</dt>
+                <dd id="builtInMemory">Loading...</dd>
+              </div>
+              <div>
+                <dt>Virtual Memory:</dt>
+                <dd id="virtualMemory">Loading...</dd>
+              </div>
+              <div>
+                <dt>Largest Unused Block:</dt>
+                <dd id="largestUnusedBlock">Loading...</dd>
+                <dd id="lastUpdated" class="last-updated">Updating...</dd>
+              </div>
+            </dl>
+          </section>
+
+          <section class="process-panel" aria-label="Top memory processes">
+            <div id="processList" class="process-list">
+              <div class="empty-row">Loading running processes...</div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
