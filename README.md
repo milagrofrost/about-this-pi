@@ -6,6 +6,9 @@ The app runs only while the About window is open. There is no background service
 
 The default theme is still PiForma-branded, but it is meant to be easy to fork and retheme.
 
+![example](about-this.png)
+
+
 ## Customize the Branding
 
 Runtime UI copy lives in `ui/config.js`:
